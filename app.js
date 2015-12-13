@@ -9,6 +9,12 @@ $(document).ready(function () {
 		$("p").remove();
 		$("h4").remove();
 
+//this sometimes removes employees on button click
+		$("h3").on('click', function () {
+			$(this).remove();
+		});
+
+
 //this prevents the information from disappearing on submit
 		event.preventDefault();
 
@@ -49,12 +55,12 @@ $(document).ready(function () {
 
 
 
-
+//I moved this into the ready function to help with the delete button
 function appendDOM(object) {
 	$("#container").append("<div></div>");
 	var $el = $("#container").children().last();
 
-	$el.append("<p>Employee Name: " + object.employeeName + "</p>");
+	$el.append("<h3>Employee Name: " + object.employeeName + "<button>Delete Employee</button></h3>");
 	$el.append("<p>Employee ID: " + object.employeeID+ "</p>");
 	$el.append("<p>Employee Job Title: " + object.employeeJobTitle + "</p>");
 	$el.append("<p>Employee Salary (Yearly): $" + object.employeeSalary + "</p>");

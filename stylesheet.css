@@ -1,5 +1,22 @@
 html, body, h1, h2, h3, p, ol, ul, li, a {
-	padding: 1px 0 1px 0;
+	padding: 1px 1px 1px 15px;
 	border: 0;
 	margin: 0;
+}
+
+body {
+	background-color: #b2b2b2;
+}
+
+button {
+	margin-left: 4px;
+}
+
+h3 {
+	font-size: 16px;
+	margin-top: 24px;
+}
+
+input {
+	color: #222222;
 }
